@@ -7,6 +7,8 @@ on:
   workflow_dispatch: {}
 jobs:
   ciclo:
+    # Si no has configurado OFICINA_URL, el trabajo se OMITE (no falla ni envía correos de error).
+    if: ${{ vars.OFICINA_URL != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
