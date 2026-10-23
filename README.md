@@ -41,6 +41,6 @@ Código bajo MIT. Los modelos 3D de mobiliario son de Kenney (CC0), ver `THIRD_P
 
 ## Credits
 
-Created by **Maximiliano Olmos** · Island Crew · https://github.com/MAXIMILIANOGROSS
+Created by **Maximiliano Olmos Sanchez** · Developer · Island Crew · https://github.com/MAXIMILIANOGROSS
 
 If you use or adapt this project, please keep this credit and the LICENSE notice.

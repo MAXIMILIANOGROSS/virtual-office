@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "description": "Oficina virtual con 43 agentes de IA (cabras), estudio de marketing y de vídeo. Plantilla en blanco para cualquier proyecto.",
-  "author": "Maximiliano Olmos",
+  "author": "Maximiliano Olmos Sanchez",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
