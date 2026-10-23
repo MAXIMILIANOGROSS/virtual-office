@@ -38,3 +38,9 @@ Copia el módulo (sin sobrescribir; usa `--forzar` si quieres), añade `three` y
 
 ## Créditos y licencias
 Código bajo MIT. Los modelos 3D de mobiliario son de Kenney (CC0), ver `THIRD_PARTY/`. Las imágenes de las cabras de `public/oficina` y `public/models/cabra` son arte de la oficina original: reemplázalas por las tuyas si redistribuyes.
+
+## Credits
+
+Created by **Maximiliano Olmos** · Island Crew · https://github.com/MAXIMILIANOGROSS
+
+If you use or adapt this project, please keep this credit and the LICENSE notice.
