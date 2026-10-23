@@ -1,0 +1,29 @@
+{
+  "name": "oficina-virtual",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Oficina virtual con 43 agentes de IA (cabras), estudio de marketing y de vídeo. Plantilla en blanco para cualquier proyecto.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "instalar": "node scripts/instalar.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "next": "^15.5.27",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.169.0",
+    "typescript": "^5"
+  }
+}

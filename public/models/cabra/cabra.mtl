@@ -1,0 +1,8 @@
+newmtl character_texture
+Ka 0.15 0.15 0.15
+Kd 1.0 1.0 1.0
+Ks 0.08 0.08 0.08
+Ns 18
+d 1.0
+illum 2
+map_Kd cabra.png

@@ -1,0 +1,24 @@
+name: Oficina ciclo 24/7
+# Dispara un ciclo de la oficina cada 15 minutos (las cabras ejecutan tareas pendientes y proponen ideas con tu aprobación).
+# Necesita: secreto CRON_SECRET (el mismo que en tu servidor) y variable de repositorio OFICINA_URL (p. ej. https://mi-oficina.vercel.app).
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+jobs:
+  ciclo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Disparar un ciclo de la oficina
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          OFICINA_URL: ${{ vars.OFICINA_URL }}
+        run: |
+          test -n "$CRON_SECRET" || { echo "Falta el secreto CRON_SECRET en GitHub (Settings → Secrets and variables → Actions)"; exit 1; }
+          test -n "$OFICINA_URL" || { echo "Falta la variable OFICINA_URL en GitHub (Settings → Secrets and variables → Actions → Variables)"; exit 1; }
+          out=$(curl -sS -L --location-trusted -m 90 -X POST -H "Authorization: Bearer $CRON_SECRET" -w '\n%{http_code}' "${OFICINA_URL%/}/api/oficina/ciclo")
+          code=$(printf '%s' "$out" | tail -n1); body=$(printf '%s' "$out" | sed '$d')
+          echo "HTTP $code"; echo "$body"
+          [ "$code" = "200" ] || { echo "El ciclo no respondió 200"; exit 1; }
+          echo "$body" | grep -q '"ok":true' || { echo "El ciclo respondió sin ok:true"; exit 1; }
